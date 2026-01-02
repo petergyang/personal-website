@@ -8,15 +8,24 @@ export default function ThemeToggle() {
 
   const applyTheme = (isDark: boolean) => {
     const root = document.documentElement;
+    // Update class
     if (isDark) {
       root.classList.add("dark");
-      root.style.setProperty("--background", "#1a1a1a");
-      root.style.setProperty("--foreground", "#f0f0f0");
-      root.style.setProperty("--accent", "#ff4444");
     } else {
       root.classList.remove("dark");
-      root.style.setProperty("--background", "#F5F5F5");
-      root.style.setProperty("--foreground", "#000000");
+    }
+    // Update injected style tag
+    let style = document.getElementById("theme-style") as HTMLStyleElement | null;
+    if (!style) {
+      style = document.createElement("style");
+      style.id = "theme-style";
+      document.head.appendChild(style);
+    }
+    if (isDark) {
+      style.textContent = "body{background:#1a1a1a!important;color:#f0f0f0!important}";
+      root.style.setProperty("--accent", "#ff4444");
+    } else {
+      style.textContent = "body{background:#F5F5F5!important;color:#000000!important}";
       root.style.setProperty("--accent", "#D30800");
     }
   };

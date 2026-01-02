@@ -44,14 +44,16 @@ export default function RootLayout({
                   var root = document.documentElement;
                   if (isDark) {
                     root.classList.add('dark');
-                    root.style.setProperty('--background', '#1a1a1a');
-                    root.style.setProperty('--foreground', '#f0f0f0');
-                    root.style.setProperty('--accent', '#ff4444');
-                  } else {
-                    root.style.setProperty('--background', '#F5F5F5');
-                    root.style.setProperty('--foreground', '#000000');
-                    root.style.setProperty('--accent', '#D30800');
                   }
+                  // Inject style tag for body - works before body exists
+                  var style = document.createElement('style');
+                  style.id = 'theme-style';
+                  if (isDark) {
+                    style.textContent = 'body{background:#1a1a1a!important;color:#f0f0f0!important}';
+                  } else {
+                    style.textContent = 'body{background:#F5F5F5!important;color:#000000!important}';
+                  }
+                  document.head.appendChild(style);
                 } catch (e) {}
               })();
             `,
