@@ -40,7 +40,7 @@ export default function RecentPosts({ showHeading = true }: RecentPostsProps) {
         <ul className="space-y-2">
           {[1, 2, 3].map((i) => (
             <li key={i} className="flex items-start gap-2">
-              <span className="text-[#D30800] mt-[2px] bullet">■</span>
+              <span className="mt-[2px] bullet" style={{ color: 'var(--accent)' }}>■</span>
               <span className="bg-gray-200 h-5 w-64 rounded animate-pulse" />
             </li>
           ))}
@@ -59,7 +59,7 @@ export default function RecentPosts({ showHeading = true }: RecentPostsProps) {
       <ul className="space-y-2">
         {posts.map((post) => (
           <li key={post.url} className="flex items-start gap-2">
-            <span className="text-[#D30800] mt-[2px] bullet">■</span>
+            <span className="mt-[2px] bullet" style={{ color: 'var(--accent)' }}>■</span>
             <a href={post.url} target="_blank" rel="noopener noreferrer">
               {post.title}
             </a>
