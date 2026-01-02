@@ -2,6 +2,7 @@ import Image from "next/image";
 import AnimatedName from "@/components/AnimatedName";
 import RecentPosts from "@/components/RecentPosts";
 import ThemeToggle from "@/components/ThemeToggle";
+import PagePeel from "@/components/PagePeel";
 
 export default function Home() {
   return (
@@ -20,9 +21,9 @@ export default function Home() {
         />
 
         <p className="mb-6">
-          I&apos;m a product leader and creator who has spent over a decade
-          building products to empower other creators at Roblox, Reddit, Meta,
-          and more.
+          I&apos;m a product leader and creator who&apos;s spent over a decade
+          building product to empower creators at Roblox, Reddit, Meta, and
+          more.
         </p>
 
         <p className="mb-6">
@@ -96,6 +97,7 @@ export default function Home() {
           .
         </p>
       </div>
+      <PagePeel />
     </main>
   );
 }
