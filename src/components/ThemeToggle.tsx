@@ -6,10 +6,26 @@ export default function ThemeToggle() {
   const [dark, setDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
+  const applyTheme = (isDark: boolean) => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add("dark");
+      root.style.setProperty("--background", "#1a1a1a");
+      root.style.setProperty("--foreground", "#f0f0f0");
+      root.style.setProperty("--accent", "#ff4444");
+    } else {
+      root.classList.remove("dark");
+      root.style.setProperty("--background", "#F5F5F5");
+      root.style.setProperty("--foreground", "#000000");
+      root.style.setProperty("--accent", "#D30800");
+    }
+  };
+
   // Sync state with DOM (blocking script in layout.tsx already set the class)
   useEffect(() => {
     const isDark = document.documentElement.classList.contains("dark");
     setDark(isDark);
+    applyTheme(isDark);
     setMounted(true);
   }, []);
 
@@ -17,7 +33,7 @@ export default function ThemeToggle() {
     const newDark = !dark;
     setDark(newDark);
     localStorage.setItem("theme", newDark ? "dark" : "light");
-    document.documentElement.classList.toggle("dark", newDark);
+    applyTheme(newDark);
   };
 
   if (!mounted) return null;
