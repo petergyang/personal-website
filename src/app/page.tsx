@@ -1,10 +1,12 @@
 import Image from "next/image";
 import AnimatedName from "@/components/AnimatedName";
 import RecentPosts from "@/components/RecentPosts";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
     <main className="min-h-screen py-16 px-6">
+      <ThemeToggle />
       <div className="max-w-[600px] mx-auto">
         <AnimatedName />
 

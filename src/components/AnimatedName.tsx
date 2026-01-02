@@ -22,7 +22,7 @@ export default function AnimatedName() {
   }, []);
 
   return (
-    <div className="mb-8">
+    <div className="mb-4">
       <h1 className="font-handwritten text-5xl md:text-6xl">
         {displayedText}
       </h1>

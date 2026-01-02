@@ -9,6 +9,12 @@
   --font-handwritten: "Caveat", cursive;
 }
 
+.dark {
+  --background: #1a1a1a;
+  --foreground: #f0f0f0;
+  --accent: #ff4444;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -86,3 +92,4 @@ li:hover .bullet {
 .font-serif {
   font-family: var(--font-crimson);
 }
+
