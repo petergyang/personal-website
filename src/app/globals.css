@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+html {
   --background: #F5F5F5;
   --foreground: #000000;
   --accent: #D30800;
@@ -9,7 +9,7 @@
   --font-handwritten: "Caveat", cursive;
 }
 
-:root.dark {
+html.dark {
   --background: #1a1a1a;
   --foreground: #f0f0f0;
   --accent: #ff4444;
@@ -191,7 +191,7 @@ li:hover .bullet {
   opacity: 1;
 }
 
-:root.dark .page-peel-corner {
+html.dark .page-peel-corner {
   filter: drop-shadow(-1px -1px 2px rgba(0, 0, 0, 0.3));
 }
 
@@ -206,7 +206,7 @@ li:hover .bullet {
   background-blend-mode: overlay;
 }
 
-:root.dark .corkboard-bg {
+html.dark .corkboard-bg {
   background-color: #8b6642;
 }
 
@@ -355,7 +355,7 @@ li:hover .bullet {
   z-index: 10;
 }
 
-:root.dark .polaroid-frame {
+html.dark .polaroid-frame {
   box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.3),
     0 12px 24px rgba(0, 0, 0, 0.25);
