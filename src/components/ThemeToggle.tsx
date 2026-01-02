@@ -6,11 +6,13 @@ export default function ThemeToggle() {
   const [dark, setDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
+  // Initialize theme from localStorage on mount (intentional hydration pattern)
   useEffect(() => {
-    setMounted(true);
     const savedTheme = localStorage.getItem("theme");
     const isDark = savedTheme === "dark";
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDark(isDark);
+    setMounted(true);
     if (isDark) {
       document.documentElement.classList.add("dark");
     }
