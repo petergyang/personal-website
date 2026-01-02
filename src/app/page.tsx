@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimatedName from "@/components/AnimatedName";
 import RecentPosts from "@/components/RecentPosts";
 
@@ -6,6 +7,15 @@ export default function Home() {
     <main className="min-h-screen py-16 px-6">
       <div className="max-w-[600px] mx-auto">
         <AnimatedName />
+
+        <Image
+          src="/peter.png"
+          alt="Peter Yang"
+          width={300}
+          height={300}
+          className="mb-8"
+          priority
+        />
 
         <p className="mb-6">
           I&apos;m a product leader and creator who has spent over a decade
