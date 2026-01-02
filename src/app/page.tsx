@@ -1,65 +1,105 @@
-import Image from "next/image";
+import AnimatedName from "@/components/AnimatedName";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <main className="min-h-screen py-16 px-6">
+      <div className="max-w-[600px] mx-auto">
+        {/* Animated Name with Hand-drawn Circle */}
+        <AnimatedName />
+
+        {/* Bio */}
+        <p className="mb-6">
+          I&apos;m a product leader and creator. Currently, I work at Roblox and
+          create extremely practical AI tutorials and interviews for busy
+          people. I also like to share{" "}
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://x.com/petergyang/status/1482071018927652866"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
+            humor
+          </a>{" "}
+          and{" "}
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/posts/petergyang_ive-talked-to-100-ai-pms-on-linkedin-to-activity-7394192229579280384-mcmo/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Documentation
+            memes
+          </a>{" "}
+          from time to time.
+        </p>
+
+        {/* Featured Writing */}
+        <p className="mb-4">Some of my favorite writing includes:</p>
+        <ul className="mb-8 space-y-2">
+          <li className="flex items-start gap-2">
+            <span className="text-[#D30800] mt-[2px]">■</span>
+            <a
+              href="https://creatoreconomy.so/p/40-life-lessons-i-know-at-40-i-wish-i-knew-at-20?utm_source=publication-search"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              40 life lessons after turning 40
+            </a>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-[#D30800] mt-[2px]">■</span>
+            <a
+              href="https://creatoreconomy.so/p/so-whats-going-to-happen-to-product-management-anyway"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              So what&apos;s going to happen to product management
+            </a>
+          </li>
+        </ul>
+
+        {/* Social Links */}
+        <p>
+          You can read my{" "}
+          <a
+            href="https://creatoreconomy.so/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            newsletter
           </a>
-        </div>
-      </main>
-    </div>
+          , check out my{" "}
+          <a
+            href="https://www.youtube.com/@peteryangyt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+          , or follow me on{" "}
+          <a
+            href="https://x.com/petergyang"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            X
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.linkedin.com/in/petergyang/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          . I also have a{" "}
+          <a
+            href="https://github.com/petergyang/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          .
+        </p>
+      </div>
+    </main>
   );
 }
