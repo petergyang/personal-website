@@ -42,12 +42,41 @@ a {
   color: var(--foreground);
   text-decoration: underline;
   text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s;
+  transition: text-decoration-color 0.2s ease,
+              text-decoration-thickness 0.2s ease,
+              transform 0.2s ease;
+  display: inline-block;
 }
 
 a:hover {
   text-decoration-color: var(--foreground);
+  text-decoration-thickness: 2px;
+  transform: translateY(-0.5px);
+}
+
+/* List bullet hover effect */
+li:hover .bullet {
+  transform: scale(1.15);
+}
+
+.bullet {
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  a, .bullet {
+    transition: none;
+  }
+  a:hover {
+    transform: none;
+  }
+  li:hover .bullet {
+    transform: none;
+  }
 }
 
 .font-handwritten {
