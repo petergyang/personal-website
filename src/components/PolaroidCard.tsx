@@ -7,6 +7,7 @@ interface PolaroidCardProps {
   year: number;
   rotation?: number;
   delay?: number;
+  description?: string;
 }
 
 export default function PolaroidCard({
@@ -16,6 +17,7 @@ export default function PolaroidCard({
   year,
   rotation = 0,
   delay = 0,
+  description = "",
 }: PolaroidCardProps) {
   return (
     <div
@@ -36,6 +38,11 @@ export default function PolaroidCard({
             className="object-cover"
             sizes="280px"
           />
+          {description && (
+            <div className="polaroid-description">
+              <p>{description}</p>
+            </div>
+          )}
         </div>
         <div className="polaroid-caption">
           <span className="polaroid-category">{category}</span>

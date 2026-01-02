@@ -3,6 +3,7 @@ import AnimatedName from "@/components/AnimatedName";
 import RecentPosts from "@/components/RecentPosts";
 import ThemeToggle from "@/components/ThemeToggle";
 import PagePeel from "@/components/PagePeel";
+import CircleLink from "@/components/CircleLink";
 
 export default function Home() {
   return (
@@ -28,21 +29,13 @@ export default function Home() {
 
         <p className="mb-6">
           I have a{" "}
-          <a
-            href="https://creatoreconomy.so/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <CircleLink href="https://creatoreconomy.so/">
             newsletter
-          </a>{" "}
+          </CircleLink>{" "}
           and{" "}
-          <a
-            href="https://www.youtube.com/@peteryangyt"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <CircleLink href="https://www.youtube.com/@peteryangyt">
             YouTube
-          </a>{" "}
+          </CircleLink>{" "}
           with extremely practical AI tutorials and interviews for busy people.
         </p>
 
@@ -71,29 +64,13 @@ export default function Home() {
 
         <p>
           You can also follow me on{" "}
-          <a
-            href="https://x.com/petergyang"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            X
-          </a>
+          <CircleLink href="https://x.com/petergyang">X</CircleLink>
           ,{" "}
-          <a
-            href="https://www.linkedin.com/in/petergyang/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <CircleLink href="https://www.linkedin.com/in/petergyang/">
             LinkedIn
-          </a>
+          </CircleLink>
           , and{" "}
-          <a
-            href="https://github.com/petergyang/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+          <CircleLink href="https://github.com/petergyang/">GitHub</CircleLink>
           .
         </p>
       </div>
