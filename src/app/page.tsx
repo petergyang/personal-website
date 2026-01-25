@@ -59,8 +59,6 @@ export default function Home() {
           , and{" "}
           <CircleLink href="https://github.com/petergyang/">GitHub</CircleLink>.
         </p>
-
-        <p className="mt-6 text-sm opacity-70">Loving Clawd 🐾</p>
       </div>
       <PagePeel />
     </main>
